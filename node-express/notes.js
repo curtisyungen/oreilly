@@ -1,5 +1,6 @@
 // ***** Node *****
 // res.end, res.writeHead
+// require() is a Node function for importing a module
 
 // ***** Express *****
 // res.send, res.status, res.set, res.type
