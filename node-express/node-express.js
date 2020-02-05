@@ -3,7 +3,7 @@ var fs = require("fs");
 
 function serveStaticFile(res, path, contentType, responseCode) {
   if (!responseCode) {
-    responseCode === 200;
+    responseCode = 200;
   }
 
   fs.readFile(__dirname + path, function(err, data) {
