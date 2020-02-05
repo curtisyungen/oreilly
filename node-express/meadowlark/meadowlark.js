@@ -32,6 +32,9 @@ app.use(function(err, req, res, next) {
   res.render("500");
 });
 
+// middleware
+app.use(express.static(__dirname + "/public"));
+
 app.listen(app.get("port"), function() {
   console.log(
     "Express started on localhost:" +
