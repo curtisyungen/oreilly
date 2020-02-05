@@ -12,6 +12,9 @@ app.set("view engine", "handlebars");
 
 app.set("port", process.env.PORT || 3000);
 
+// middleware location
+app.use(express.static(__dirname + "/public"));
+
 // middleware to detect test in url query string
 app.use(function(req, res, next) {
   res.locals.showTests =
@@ -40,9 +43,6 @@ app.use(function(err, req, res, next) {
   res.status(500);
   res.render("500");
 });
-
-// middleware location
-app.use(express.static(__dirname + "/public"));
 
 app.listen(app.get("port"), function() {
   console.log(
