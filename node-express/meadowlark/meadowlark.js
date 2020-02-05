@@ -12,6 +12,14 @@ app.set("view engine", "handlebars");
 
 app.set("port", process.env.PORT || 3000);
 
+// middleware to detect test in url query string
+app.use(function(req, res, next) {
+  res.locals.showTests =
+    app.get("env") !== "production" && req.query.test === "1";
+  next();
+});
+
+// routes
 app.get("/", function(req, res) {
   res.render("home");
 });
@@ -33,7 +41,7 @@ app.use(function(err, req, res, next) {
   res.render("500");
 });
 
-// middleware
+// middleware location
 app.use(express.static(__dirname + "/public"));
 
 app.listen(app.get("port"), function() {
