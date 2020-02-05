@@ -1,10 +1,7 @@
-// TO LEARN
+// ***** Node *****
+// res.end, res.writeHead
 
-// ***** Terminal *****
-// Search for text in files
-// Search for files and directories
-// Chain commands together
-// Copy, move, and delete files
-// Redirect output
-
-// ***** Regex *****
+// ***** Express *****
+// res.send, res.status, res.set, res.type
+// app.use: method by which Express adds middleware
+// In Express, the order in which routes and middleware are defined is significant
