@@ -6,7 +6,9 @@ namespace c_sharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Interpolated String
+            int x = 4;
+            Console.WriteLine($"A square has {x} sides.");
         }
     }
 }
